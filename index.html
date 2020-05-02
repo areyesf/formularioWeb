@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de satisfacción</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Encabezado -->
+      <header>
+        <h1 id="title" class="text-center">Formulario de Encuesta</h1>
+        <p id="description" class="text-center">
+          Gracias por tomarte un tiempo para mejorar la plataforma
+        </p>
+      </header>
+      <!-- Inicio Formulario -->
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Nombre</label>
+          <input
+            class="form-control"
+            id="name"
+            type="text"
+            placeholder="Ingresa tu nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+          <input
+            class="form-control"
+            id="email"
+            type="email"
+            placeholder="Ingresa tu email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="number" id="number-label">Edad (Opcional)</label>
+          <input
+            class="form-control"
+            id="number"
+            type="number"
+            min="10"
+            max="99"
+            placeholder="Ingresa tu edad"
+          />
+        </div>
+        <div class="form-group">
+          <p>
+            ¿Cuál de las siguientes acciones describe mejo tu ocupación actual?
+          </p>
+          <select class="form-control" name="ocupacion" id="dropdown" required>
+            <option disable="" selected="" value=""
+              >Seleccionar Ocupación Actual</option
+            >
+            <option value="estudiante">Estudiante</option>
+            <option value="trabajador">Trabajador Tiempo Completo</option>
+            <option value="estudiante">Estudiante Tiempo Completo</option>
+            <option value="nodecir">Prefiero No Decir</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>¿Recomendarías FreeCodeCamp a un amigo?</p>
+          <label>
+            <input
+              class="input-radio"
+              name="recomendacion-user"
+              type="radio"
+              checked
+              value="definitivamente"
+            />
+            Definitivamente.
+          </label>
+          <label>
+            <input
+              class="input-radio"
+              name="recomendacion-user"
+              type="radio"
+              value="talvez"
+            />
+            Talvez.
+          </label>
+          <label>
+            <input
+              class="input-radio"
+              name="recomendacion-user"
+              type="radio"
+              value="noseguro"
+            />
+            No estoy seguro.
+          </label>
+        </div>
+        <div class="form-group">
+          <p>¿Cuál es tu característica favorita de FreeCodeCamp?</p>
+          <select class="form-control" name="favorito" id="favorito" required>
+            <option disable="" selected="" value=""
+              >Selecciona una Opción</option
+            >
+            <option value="desafios">Desafíos</option>
+            <option value="proyectos">Proyectos</option>
+            <option value="comunidad">Comunidad</option>
+            <option value="opensource">Open Source</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>
+            ¿Qué te gustaría ver mejorado?<span
+              >Marca todas las que correspondan</span
+            >
+          </p>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="front-end"
+            />
+            Proyecto Front-End
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="back-end"
+            />
+            Proyecto Back-End
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="datavisual"
+            />
+            Data Visualization (visualización de Data)
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="desafios"
+            />
+            Desafíos
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="comunidad"
+            />
+            Comunidad Open Source
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="ayudagitter"
+            />
+            Espacios de ayuda Gitter
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="videos"
+            />
+            Videos
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="lugares-reunion"
+            />
+            Lugares de reunicion en la ciudad
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="wiki"
+            />
+            Wiki
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="foro"
+            />
+            Foro
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              class="input-checkbox"
+              name="mejora"
+              value="recursos-adicional"
+            />
+            Recursos adicionales
+          </label>
+        </div>
+        <div class="form-group">
+          <p>¿Algún comentario o sugerencia?</p>
+          <textarea
+            name="comentario"
+            id="comentario"
+            placeholder="Ingresa tu comentario aquí"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button id="submit" class="submit-button" type="submit">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

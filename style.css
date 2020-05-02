@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+/*definicion de paleta de colores*/
+:root {
+  --color-font: #fff;
+  --color-darkgreen: rgba(9, 82, 86, 0.8);
+  --color-lightgreen: #087f8c;
+  --color--brown: #9f8a6a;
+  --color-aquagreen: #5aaa95;
+  --color-brownyello: #bb9f06;
+}
+
+/*Ajustar todos los elementos al contenedor*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: var(--color-font);
+  margin: 0; /*limpiamos los margenes*/
+}
+
+/*agregamos imagen de fondo con una capa opaca degradada*/
+body::before {
+  content: ""; /*ya que usamos ::before debemos usar content*/
+  position: fixed; /*para que no baje si se hace scroll*/
+  top: 0; /*colocado arriba*/
+  left: 0; /* colocado hacia la derecha*/
+  width: 100%; /*usa todo al ancho*/
+  height: 100%; /*usa todo el alto*/
+  z-index: -1; /*lo dejamos abajo*/
+  background: var(--color-lightgreen);
+  /*agregamos imagen gradiante*/
+  background-image: linear-gradient(
+      150deg,
+      rgba(9, 82, 86, 0.7),
+      rgba(8, 127, 140, 0.5)
+    ),
+    url(https://enlinea.santotomas.cl/wp-content/uploads/sites/2/2018/03/vu-700x465.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#description {
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /*sombra sutil a letra cursiva del header*/
+}
+
+/* Formulario */
+form {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 3rem 1rem;
+  background: var(--color-darkgreen);
+  border-radius: 0.5rem;
+}
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.form-group {
+  margin: 0 auto 0.5rem auto;
+  padding: 0.2rem;
+}
+
+form label,
+form p {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+form p {
+  line-height: 1.5;
+}
+
+.form-control {
+  /*disposición*/
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+  /*estilos*/
+  color: #000;
+  background: #fff;
+  background-clip: padding-box;
+  border: 1px solid var(--color-darkgreen);
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease-in-out, shadow-box 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border: 2px solid var(--color-aquagreen);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.5rem;
+  min-width: 0.5rem;
+  min-height: 0.5rem;
+}
+
+textarea {
+  min-width: 100%;
+  min-height: 6rem;
+  padding: 0.75rem;
+  resize: vertical;
+}
+
+button {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  background: var(--color-brownyello);
+  color: var(--color-font);
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
